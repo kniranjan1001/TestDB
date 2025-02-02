@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000; // Use environment variable or default to
 app.use(bodyParser.json());
 
 // Get MongoDB URI from environment variables
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI ='mongodb+srv://cecir57193:CEdMToCzySOTMeBq@cluster0.uqzbu.mongodb.net/' ;
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI, {
