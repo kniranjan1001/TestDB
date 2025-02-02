@@ -53,6 +53,11 @@ app.post('/save-string', async (req, res) => {
     }
 });
 
+// GET API to check if the app is working
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'App is working!' });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
