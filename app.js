@@ -1,5 +1,6 @@
 // Import required modules
-require('dotenv').config(); // Load environment variables
+require('dotenv').config();// Load environment variables
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -10,6 +11,8 @@ const PORT = process.env.PORT || 3000; // Use environment variable or default to
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+app.use(cors());
+
 
 // Get MongoDB URI from environment variables
 const MONGO_URI ='mongodb+srv://cecir57193:CEdMToCzySOTMeBq@cluster0.uqzbu.mongodb.net/' ;
